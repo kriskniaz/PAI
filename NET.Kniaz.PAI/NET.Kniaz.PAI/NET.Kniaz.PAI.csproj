@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{75113390-5763-4327-BDBB-1370B7359510}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>NET.Kniaz.PAI</RootNamespace>
+    <AssemblyName>NET.Kniaz.PAI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\Agents\CleaningAgent.cs" />
+    <Compile Include="Model\Agents\Rover\Belief.cs" />
+    <Compile Include="Model\Agents\Rover\Desire.cs" />
+    <Compile Include="Model\Agents\Rover\Enums.cs" />
+    <Compile Include="Model\Agents\Rover\Intention.cs" />
+    <Compile Include="Model\Agents\Rover\Mars.cs" />
+    <Compile Include="Model\Agents\Rover\MarsRover.cs" />
+    <Compile Include="Model\Agents\Rover\Percept.cs" />
+    <Compile Include="Model\Agents\Rover\Plan.cs" />
+    <Compile Include="Model\FirstOrderLogic\CleaningRobot.cs" />
+    <Compile Include="Model\PropositionalLogic\And.cs" />
+    <Compile Include="Model\PropositionalLogic\BinaryGate.cs" />
+    <Compile Include="Model\PropositionalLogic\Clause.cs" />
+    <Compile Include="Model\PropositionalLogic\Cnf.cs" />
+    <Compile Include="Model\PropositionalLogic\Formula.cs" />
+    <Compile Include="Model\PropositionalLogic\Heuristics.cs" />
+    <Compile Include="Model\PropositionalLogic\Not.cs" />
+    <Compile Include="Model\PropositionalLogic\Or.cs" />
+    <Compile Include="Model\PropositionalLogic\Variable.cs" />
+    <Compile Include="Model\Simple\And.cs" />
+    <Compile Include="Model\Simple\BinaryDecisionTree.cs" />
+    <Compile Include="Model\Simple\BinaryGate.cs" />
+    <Compile Include="Model\Simple\Formula.cs" />
+    <Compile Include="Model\Simple\Not.cs" />
+    <Compile Include="Model\Simple\Or.cs" />
+    <Compile Include="Model\Simple\Variable.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RunCleaningAgent.cs" />
+    <Compile Include="RunPropositionalLogic.cs" />
+    <Compile Include="RunCleaningRobot.cs" />
+    <Compile Include="RunSimple.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
